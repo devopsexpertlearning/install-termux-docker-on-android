@@ -82,7 +82,7 @@ This repo is a combination of [this](https://github.com/egandro/docker-qemu-arm)
 * **How do I make changes in a container permanent?** You can see when we use 'docker run' we are always using the -v parameter. That's a volume. After you exit your container, volumes will remain. By default we use ~/docker-volumes/container-name. Remember this IS inside the qemu virtual machine, NOT in your Termux directories.
 
 
-## Notes If want to increase Disk Space Size please follow below steps
+## Notes: If want to increase Disk Space Size please follow below steps
 
 * **Increase Disk Space:**
 
