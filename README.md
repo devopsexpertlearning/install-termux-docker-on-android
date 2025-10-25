@@ -82,44 +82,59 @@ This repo is a combination of [this](https://github.com/egandro/docker-qemu-arm)
 * **How do I make changes in a container permanent?** You can see when we use 'docker run' we are always using the -v parameter. That's a volume. After you exit your container, volumes will remain. By default we use ~/docker-volumes/container-name. Remember this IS inside the qemu virtual machine, NOT in your Termux directories.
 
 
-Increase Disk Space:
+## Notes If want to increase Disk Space Size please follow below steps
 
+* **Increase Disk Space:**
+
+```bash
 
 qemu-img resize alpine.img 10G
 
+```
 
-To see details:
+* **To see details:**
+
+```bash
 
 qemu-img info alpine.img
 
+```
 
-Check Partitions:
-
+* **Check Partitions:**
+```bash
 
 lsblk
 
+```
 
+* **Install parted **
+
+```bash
+#install partee
 apk add parted
 
+#To see info
 parted /dev/sda
-
 print
 
+#Resize
 resizepart 2 100%
 
+#quit
 quit
 
+#Resize
 resize2fs /dev/sda2
-
-
-
 cat /proc/sys/kernel/random/uuid > /etc/machine-id
 
+```
 
-Change swap ini file
+* **Change swap ini file**
 
-
+```bash
 nano /etc/conf.d/zram.ini
+
+```
 
 
 
