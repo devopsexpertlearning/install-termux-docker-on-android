@@ -40,7 +40,7 @@ This repo is a combination of [this](https://github.com/egandro/docker-qemu-arm)
   ```sh
   # Run this command to login interactively into the container and run commands like 'kubectl'.
   # WARNING: This container won't do anything by itself if you make it run on background.
-  docker run -it --entrypoint /bin/sh -p 6443:6443 -p 2379:2380 -p 10250:10250 -p 10259:10259 -p 10257:10257 -p 30001:32767 -v ~/docker-volumes/kubernetes:/home -v /var/run/docker.sock:/var/run/docker.sock alpine/k8s:1.24.12
+  docker run -it --entrypoint /bin/sh -p 6443:6443 -p 2379:2380 -p 10250:10250 -p 10259:10259 -p 10257:10257 -p 30001:32767 -v ~/docker-volumes/kubernetes:/home -v /var/run/docker.sock:/var/run/docker.sock alpine/k8s:1.31.13
   ```
 
 ## How to use: Prometheus
